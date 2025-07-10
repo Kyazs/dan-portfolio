@@ -71,3 +71,6 @@ RPA uses software "bots" to automate repetitive, rule-based digital tasks, such 
 ## Conclusion
 
 AI Automation is a transformative technology that is reshaping industries. By combining the learning capabilities of AI with the execution power of automation, organizations can build more intelligent, resilient, and efficient operations. As the technology continues to mature, it will unlock even more sophisticated possibilities for automating the world around us.
+
+
+test 123 123
