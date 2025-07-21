@@ -1,58 +1,35 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { blogs } from "@/data/blogs";
 import BlogEntry from "./BlogEntry";
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import Link from "next/link";
 
 export default function Blogs() {
-  const [selectedBlog, setSelectedBlog] = useState(null);
-
-  const handleBlogClick = (blog) => {
-    setSelectedBlog(blog);
-  };
-
-  const handleBackClick = () => {
-    setSelectedBlog(null);
-  };
 
   return (
     <main className="flex-grow flex flex-col items-center h-full relative pt-20">
       <div className="flex w-full items-center justify-center p-4">
         <h1 className="text-3xl md:text-7xl font-extrabold text-center">
-          {selectedBlog ? selectedBlog.title : "Blogs"}
+          Tour Blogs
         </h1>
       </div>
 
-      <div className="flex flex-col w-full max-w-5xl mx-auto p-4 md:p-4 my-10 md:my-20">
-        {selectedBlog ? (
-          <div>
-            <div className="prose dark:prose-invert max-w-none">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {selectedBlog.content}
-              </ReactMarkdown>
-            </div>
-            <button
-              onClick={handleBackClick}
-              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-            >
-              Back to Blogs
-            </button>
-          </div>
-        ) : (
-          <ul>
-            {blogs.map((blog) => (
-              <BlogEntry
-                key={blog.id}
-                id={blog.id}
-                title={blog.title}
-                date={blog.date}
-                image={blog.image}
-                onClick={() => handleBlogClick(blog)}
-              />
-            ))}
-          </ul>
-        )}
+      <div className="flex flex-col w-full max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-20">
+        <ul className="space-y-6">
+          {blogs.map((blog) => (
+            <Link key={blog.id} href={`/Blogs/${blog.id}`}>
+                <BlogEntry
+                  id={blog.id}
+                  title={blog.title}
+                  date={blog.date}
+                  image={blog.image}
+                  summary={blog.summary}
+                  readTime={blog.readTime}
+                  onClick={() => {}}
+                />
+            </Link>
+          ))}
+        </ul>
       </div>
     </main>
   );

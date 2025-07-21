@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
+    "@tailwindcss/typography": "^0.5.16",
     "framer-motion": "^11.18.2",
     "gsap": "^3.13.0",
     "matter-js": "^0.20.0",
