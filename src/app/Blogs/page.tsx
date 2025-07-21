@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { blogs } from "@/data/blogs";
 import BlogEntry from "./BlogEntry";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export default function Blogs() {
   const [selectedBlog, setSelectedBlog] = useState(null);
@@ -26,9 +28,9 @@ export default function Blogs() {
         {selectedBlog ? (
           <div>
             <div className="prose dark:prose-invert max-w-none">
-              {selectedBlog.content.split('\n').map((paragraph, index) => (
-                <p key={index} className="mb-4">{paragraph}</p>
-              ))}
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {selectedBlog.content}
+              </ReactMarkdown>
             </div>
             <button
               onClick={handleBackClick}
@@ -45,6 +47,7 @@ export default function Blogs() {
                 id={blog.id}
                 title={blog.title}
                 date={blog.date}
+                image={blog.image}
                 onClick={() => handleBlogClick(blog)}
               />
             ))}
