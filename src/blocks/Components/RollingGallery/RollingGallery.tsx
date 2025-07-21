@@ -13,12 +13,12 @@ import {
 } from "framer-motion";
 
 const IMGS: string[] = [
-    "/hackathons/ffdg.JPG",
-    "/hackathons/ideathon.jpg",
-    "/hackathons/inno2024.JPG",
-    "/hackathons/innolympics.JPG",
-    "/hackathons/kmc.JPG",
-    "/hackathons/springlabs.JPG",
+    "/blogs/ffdg.JPG",
+  "/blogs/ideathon.jpg",
+  "/blogs/inno2024.JPG",
+  "/blogs/innolympics.JPG",
+  "/blogs/kmc.JPG",
+  "/blogs/springlabs.JPG",
 ];
 
 interface RollingGalleryProps {
