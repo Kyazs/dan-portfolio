@@ -8,54 +8,69 @@ import Image from 'next/image';
 
 
 const experiences = [
-  // ... your experiences array - Keep this array as is
   {
     id: 1,
-    title: 'Student Trainee',
-    company: 'Datacom',
-    year: '2015',
-    description: 'Attended a three-month workshop at DATACOM during my younger years, where we were taught about the fundamentals of MS Excel, the proficiency of keyboarding, and the main components of a computer system.',
-    logo: '/exp_logos/datacom.svg',
+    title: 'Freelance Graphics Editor',
+    company: 'Freelance',
+    year: '2018 - Present',
+    description: 'Working as a freelance graphics editor on a project-based approach, creating visual content and designs for various clients and projects.',
+    logo: '/exp_logos/datacom.svg', // You may want to create a freelance logo
   },
   {
     id: 2,
-    title: 'External Scholar',
-    company: 'Security Bank Corporation',
-    year: '2022',
-    description: 'One of the external scholars of the Security Bank Corporation. Inside this, we are tasked with attending related seminars and maintaining grades on our academic standings.',
-    logo: '/exp_logos/sbc.svg',
+    title: 'Freelance Photographer',
+    company: 'Freelance',
+    year: '2018 - Present',
+    description: 'Providing professional photography services for weddings, debuts, birthdays, and other special events, capturing memorable moments with creativity and expertise.',
+    logo: '/exp_logos/datacom.svg', // You may want to create a photography logo
   },
   {
     id: 3,
-    title: 'Academe Committee Head',
-    company: 'PLM College of Engineering Student Council',
-    year: '2023',
-    description: `As the head of the committee, I am in charge of developing new plans and events for the student body while collaborating with my members. We ensure that we give the best experience to the students academically. That's why we also receive and assess students' concerns around the campus.`,
-    logo: '/exp_logos/plmce.svg',
+    title: 'SOCCOM Head',
+    company: 'St. Ignatius of Loyola',
+    year: '2018 - Present',
+    description: 'Leading the Social Communications committee, responsible for managing and coordinating communication strategies and social media presence for the organization.',
+    logo: '/exp_logos/datacom.svg', // You may want to create a specific logo
   },
   {
     id: 4,
-    title: 'Web Development Lead',
-    company: 'Google Developer Student Clubs - PLM',
-    year: '2024',
-    description: 'As the Web Development Lead for GDSC PLM, I spearheaded initiatives to create impactful technology and web development projects and events, both online and in-person, aimed at benefiting not only PLM students but the wider community.',
-    logo: '/exp_logos/gdscplm.svg',
+    title: 'Freelance UI/UX Designer',
+    company: 'Freelance',
+    year: '2022 - 2024',
+    description: 'Provided UI/UX design services on a project-based approach, creating user-centered designs and improving user experiences for various digital products and applications.',
+    logo: '/exp_logos/datacom.svg', // You may want to create a design-specific logo
   },
   {
     id: 5,
-    title: 'Notion Campus Leader',
-    company: 'Notion',
-    year: '2024',
-    description: `Holding the distinction of being one of the few chosen Notion Campus Leaders globally, my role is to drive the adoption and skillful utilization of Notion among users, especially students. This involves creating and leading campaigns, events, and initiatives designed to meet Notion's strategic goals.`,
-    logo: '/exp_logos/notion.svg',
+    title: 'President',
+    company: 'Unbound Zamboanga Tetuan',
+    year: '2022 - 2024',
+    description: 'Led the organization as President, overseeing operations, strategic planning, and team management while driving initiatives to achieve organizational goals and community impact.',
+    logo: '/exp_logos/datacom.svg', // You may want to create an Unbound logo
   },
   {
     id: 6,
-    title: 'DataCamp Scholar',
-    company: 'DataCamp',
-    year: '2025',
-    description: 'As a DataCamp Scholar, I am privileged to be part of a select group of students who have been recognized for their outstanding performance and potential in the field of data science. This recognition underscores my commitment to advancing my skills and knowledge in this dynamic field.',
-    logo: '/exp_logos/datacamp.svg',
+    title: 'Cashier',
+    company: 'Berry Sam',
+    year: '2022 - 2024',
+    description: 'Worked as a cashier, handling customer transactions, managing cash flow, and ensuring excellent customer service in a fast-paced retail environment.',
+    logo: '/exp_logos/datacom.svg', // You may want to create a Berry Sam logo
+  },
+  {
+    id: 7,
+    title: 'SK Member',
+    company: 'Sangguniang Kabataan of Tetuan',
+    year: '2023 - Present',
+    description: 'Serving as a member of the Sangguniang Kabataan, contributing to youth-focused initiatives and community development programs in Tetuan.',
+    logo: '/exp_logos/datacom.svg', // You may want to create an SK logo
+  },
+  {
+    id: 8,
+    title: 'Project Manager',
+    company: 'TORCH',
+    year: '2023 - Present',
+    description: 'Managing projects from conception to completion, coordinating with team members, ensuring timely delivery, and maintaining quality standards throughout the project lifecycle.',
+    logo: '/exp_logos/datacom.svg', // You may want to create a TORCH logo
   },
 ];
 
@@ -118,15 +133,15 @@ const ExperienceTimeline: React.FC = () => {
               </span>
 
               {/* Logo */}
-              <div className="w-10 h-10 relative flex items-center justify-center md:my-0 my-5"> {/* Added flex centering for logos */}
-                <Image
+              {/* <div className="w-10 h-10 relative flex items-center justify-center md:my-0 my-5"> {/* Added flex centering for logos */}
+              {/*  <Image
                   src={exp.logo}
                   alt={`${exp.company} logo`}
                   fill
                   style={{ objectFit: 'contain' }} // Use contain to show the whole logo
                   unoptimized // Keep if necessary for SVGs, but test without if possible
                 />
-              </div>
+              </div> */}
             </div>
 
             {/* Side 2: Description - Conditional Alignment */}
