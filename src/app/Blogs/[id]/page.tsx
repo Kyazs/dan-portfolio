@@ -62,7 +62,7 @@ export default function BlogDetail() {
                         {blog.tags && blog.tags.map((tag, idx) => (
                             <span
                                 key={tag + idx}
-                                className="bg-green-700/30 text-green-300 px-2 py-1 rounded text-xs font-medium"
+                                className="bg-pink-700/30 text-pink-300 px-2 py-1 rounded text-xs font-medium"
                             >
                                 #{tag}
                             </span>
@@ -127,7 +127,7 @@ export default function BlogDetail() {
                     </article>
                     <button
                         onClick={() => router.push("/Blogs")}
-                        className="mt-8 px-6 py-3 bg-white text-black rounded-lg font-medium"
+                        className="mt-8 px-6 py-3 bg-gradient-to-r text-white rounded-xl font-bold shadow-lg  border border-pink-400 cursor-pointer hover:bg-pink-500/20 hover:shadow-pink-400/60 transition-colors duration-300"
                     >
                         Back to Blogs
                     </button>
