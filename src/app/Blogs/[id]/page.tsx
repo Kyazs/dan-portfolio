@@ -1,10 +1,13 @@
 "use client";
 import { useRouter, useParams } from "next/navigation";
 import { blogs } from "@/data/blogs";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+
 import React from "react";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+import rehypeSanitize from "rehype-sanitize";
 
 export default function BlogDetail() {
     const router = useRouter();
@@ -35,7 +38,7 @@ export default function BlogDetail() {
                     <div className="relative w-full" style={{ aspectRatio: "16/9", minHeight: 200 }}>
                         <Image
                             src={blog.image}
-                            alt={blog.title}
+                            alt={blog.name}
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
                             priority
@@ -51,7 +54,7 @@ export default function BlogDetail() {
                         </div>
                         <div>
                             <div className="font-semibold text-base">Daniela Marie Alpez</div>
-                            <div className="text-xs text-gray-400">{new Date(blog.date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</div>
+                            <div className="text-xs text-gray-400">{new Date(blog.date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })} | <span className="font-medium"> {blog.readTime} min read</span></div>
                         </div>
                     </div>
                     {/* Tags */}
@@ -69,14 +72,59 @@ export default function BlogDetail() {
                 {/* Title */}
                 <div className="px-8 md:px-12 pb-2">
                     <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
-                        {blog.title}
+                        {blog.name}
                     </h1>
                 </div>
                 {/* Content */}
                 <div className="px-8 md:px-12 pb-8">
-                    <div className="prose prose-lg dark:prose-invert max-w-none w-full markdown-content">
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{blog.content}</ReactMarkdown>
-                    </div>
+                    <article className="prose prose-lg dark:prose-invert max-w-3xl text-2xl w-full markdown-content leading-relaxed !prose-headings:font-bold !prose-headings:mb-4 !prose-p:leading-relaxed !prose-img:rounded-lg !prose-img:shadow-lg !prose-a:text-blue-600 dark:!prose-a:text-blue-400"                    >
+
+                        <ReactMarkdown
+                            remarkPlugins={[remarkGfm]}
+                            rehypePlugins={[rehypeRaw, rehypeSanitize]}
+                            components={{
+                                img: ({ node, alt = '', src = '', ...props }) => {
+                                    // Detect alignment from alt text
+                                    let alignment = 'default';
+                                    let cleanedAlt = alt;
+
+                                    if (alt.startsWith('right:')) {
+                                        alignment = 'right';
+                                        cleanedAlt = alt.replace('right:', '').trim();
+                                    } else if (alt.startsWith('left:')) {
+                                        alignment = 'left';
+                                        cleanedAlt = alt.replace('left:', '').trim();
+                                    } else if (alt.startsWith('center:')) {
+                                        alignment = 'center';
+                                        cleanedAlt = alt.replace('center:', '').trim();
+                                    }
+
+                                    // Tailwind alignment classes
+                                    const classMap: Record<string, string> = {
+                                        right: 'float-right ml-4 mb-4 w-80 rounded-lg shadow-lg',
+                                        left: 'float-left mr-4 mb-4 w-80 rounded-lg shadow-lg',
+                                        center: 'mx-auto my-4 w-80 block rounded-lg shadow-lg',
+                                        default: 'my-4 w-full max-w-md rounded-lg shadow-lg',
+                                    };
+
+                                    return (
+                                        <span className={classMap[alignment]}>
+                                            <Image
+                                                src={src}
+                                                alt={cleanedAlt}
+                                                width={500}
+                                                height={300}
+                                                className="rounded-lg shadow-lg object-cover"
+                                            />
+                                        </span>
+                                    );
+                                },
+                            }}
+                        >
+                            {blog.content()}
+                        </ReactMarkdown>
+
+                    </article>
                     <button
                         onClick={() => router.push("/Blogs")}
                         className="mt-8 px-6 py-3 bg-white text-black rounded-lg font-medium"

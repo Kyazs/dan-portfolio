@@ -1,57 +1,43 @@
-export const blog2 = {
+export const Day2 = {
     id: 2,
-    title: "Mastering React Hooks: A Deep Dive",
-    summary: "A comprehensive guide to React Hooks, their usage, and advanced patterns for modern React apps.",
-    tags: ["react", "hooks", "javascript"],
-    content: `# Mastering React Hooks: A Deep Dive
+    name: "Inside Foundever & Google's Inspiring Story",
+    tags: ["foundever", "google", "career", "inspiration", "manila"],
+    date: "June 9, 2025",
+    image: '/image/day2/imasd.jpg',
+    slug: "foundever-and-google-story",
+    readTime: "4",
+    excerpt: "From warm welcomes at Foundever to an unforgettable encounter with the President of Google Philippines, Day 2 was all about career inspiration and chasing dreams.",
+    content: () => `# Day 2: Inside Foundever and Google's Inspiring Story
 
-## Why Hooks Changed Everything
+## The "Industrial" Tour Begins
 
-Before hooks, managing state in React felt like juggling flaming swords. Now? Everything just clicks. No more class components, no more lifecycle confusion—just pure, functional magic.
+Day two, June 9, 2025, was when the real "industrial" part of our tour began. Our morning visit was to **Foundever Philippines** in Pasig City. Everyone there was incredibly welcoming, making us feel right at home.
 
-### The Essentials
+### Foundever: Lessons for the Future
 
-- **useState:** Local state, made simple.
-- **useEffect:** Side effects, handled cleanly.
-- **useContext:** Global data, no prop drilling.
+The company's representatives gave us insightful talks about what it's like to work there, how you can grow in your job, and why work-life balance matters. These lessons felt especially important as we all prepare to start our own careers soon. Touring their offices gave us a glimpse into real professional life.
 
-### Level Up: Custom Hooks
+**Key Takeaways:**
+- Career growth opportunities
+- Importance of work-life balance
+- Welcoming company culture
 
-Want to reuse logic across components? Build your own custom hooks! It’s like creating your own set of superpowers.
+### Google Philippines: Dream Big
 
-> "With great hooks comes great responsibility."
+The afternoon was a true highlight: our visit to **Google Philippines**. The moment we walked into their bright, modern office, you could feel the excitement in the air. We were so lucky to hear directly from the President of Google Philippines.
 
-### Watch Out For
+He shared his inspiring story—how his career path wasn't straight at all. He didn't even study his dream course in college and went to law school for a while! But through all those changes, his love for technology never faded. In the end, he followed his true passion, leading him to a top job at one of the world's biggest tech companies.
 
-- Performance pitfalls
-- Dependency array surprises
+**Inspiration:**
+- It's okay if your path isn't perfect
+- Believe in your dreams, no matter what
+- Passion can lead you to amazing places
 
-~~~javascript
-import React, { useState, useEffect } from 'react';
+### Reflections
 
-function ExampleComponent() {
-  const [count, setCount] = useState(0);
+Day 2 left us feeling inspired and motivated. Meeting real professionals and hearing their stories made us realize that success isn't always a straight line—and that's okay. We couldn't wait to see what the next day would bring!
 
-  useEffect(() => {
-    document.title = 'You clicked ${'count'} times';
-  }, [count]);
+---
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
-~~~
-
-## Final Thoughts
-
-Experiment, break things, and master the art of hooks. Your future self (and your codebase) will thank you!
-`,
-    date: "2025-06-22",
-    image: "/proj/projectTwo.png",
-    readTime: 7,
+*"Sometimes the best journeys are the ones with unexpected turns."*`
 };

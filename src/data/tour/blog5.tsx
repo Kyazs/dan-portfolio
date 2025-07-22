@@ -1,39 +1,37 @@
-export const blog5 = {
-  id: 5,
-  title: "Demystifying Cloud Computing: A Beginner's Guide",
-  summary: "An easy-to-understand introduction to cloud computing, its models, and its benefits for businesses.",
-  tags: ["cloud", "beginner", "computing"],
-  content: `# Demystifying Cloud Computing: A Beginner's Guide
+import image from "../hackathons/ideathon.jpg";
+export const Day5 = {
+    id: 5,
+    name: "Tagaytay's Cool Breeze & Roller Coaster Thrills",
+    tags: ["tagaytay", "skyview", "skyranch", "adventure", "bonding"],
+    date: "June 12, 2025",
+    image: image, // Add your image import here
+    slug: "tagaytay-cool-breeze",
+    readTime: "3",
+    excerpt: "Independence Day in Tagaytay brought cool winds, wild rides, and unforgettable memories—a perfect break from the city and a chance to bond with friends.",
+    content: `# Day 5: Tagaytay's Cool Breeze and Roller Coaster Thrills
 
-## Why Cloud Computing?
+## A Day of Freedom and Fun
 
-Let’s bust a myth: cloud computing isn’t just for tech giants—it’s for everyone. Imagine launching a global app from your laptop, scaling to millions overnight, and only paying for what you use. That’s the power of the cloud, and it’s changing the game for businesses big and small.
+On June 12, 2025—Independence Day—we celebrated our "freedom" by exploring the beautiful city of **Tagaytay**. The weather was cool and a little foggy, adding to the charm of the day.
 
-## The Cloud Alphabet Soup
+### Sky View Park: Windy Wonders
 
-- **IaaS:** Infrastructure as a Service
-- **PaaS:** Platform as a Service
-- **SaaS:** Software as a Service
+Our first stop was **Sky View Park**. Despite the wind, we had a blast taking selfies, groupies, and a big group photo. We also bought delicious local snacks and souvenirs to take home.
 
-## Choosing Your Cloud
+### Sky Ranch Tagaytay: Thrills & Laughter
 
-Compare the big players:
+After a fun picnic lunch in the parking lot, we headed into **Sky Ranch Tagaytay**. We tried all sorts of rides—from gentle to wild! Some friends even got a little dizzy, but it just made the memories even funnier. We snapped more photos, grabbed more snacks, and soaked in the stunning views.
 
-- **AWS**
-- **Azure**
-- **Google Cloud**
+**Highlights:**
+- Amusement park rides
+- Group bonding
+- Scenic views and cool weather
 
-## The Best Part
+### Reflections
 
-The cloud lets you dream bigger, build faster, and innovate without limits.
+By the end of the day, we were tired, our wallets lighter, but our hearts incredibly happy. It was the perfect break from company visits and a chance to grow closer as friends.
 
-![Cloud Computing](/proj/projectFive.png)
+---
 
-## Ready to Take Off?
-
-Ready to take your ideas sky-high? The cloud is waiting—let’s explore it together!
-`,
-  date: "2025-07-18",
-  image: "/proj/projectFive.png",
-  readTime: 5,
+*"Sometimes, the best lessons are learned outside the classroom."*`
 };

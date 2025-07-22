@@ -1,35 +1,46 @@
-export const blog3 = {
-  id: 3,
-  title: "Building Scalable APIs with FastAPI and Python",
-  summary: "Learn how to build, deploy, and scale high-performance APIs using FastAPI and Python.",
-  tags: ["fastapi", "python", "api"],
-  content: `# Building Scalable APIs with FastAPI and Python
+import image from "../hackathons/ideathon.jpg";
+export const Day3 = {
+    id: 3,
+    name: "Exploring the BPO World & Quiet Reflections",
+    tags: ["teleperformance", "bpo", "kollab", "cemetery", "reflection", "manila"],
+    date: "June 10, 2025",
+    image: image, // Add your image import here
+    slug: "bpo-world-and-reflections",
+    readTime: "2",
+    excerpt: "From the bustling world of BPO at Teleperformance to a humbling visit at the Manila American Cemetery, Day 3 was a mix of business insights and meaningful moments.",
+    content: `# Day 3: Exploring the BPO World and Moments of Quiet Respect
 
-## Why FastAPI?
+## A Deep Dive into Manila's Business Scene
 
-- 🚀 **Speed:** Blazing fast, thanks to Starlette and Pydantic.
-- 🛡️ **Type Safety:** Catch bugs before they happen.
-- 📚 **Automatic Docs:** Swagger UI and ReDoc out of the box.
+June 10, 2025, started early with a visit to **Teleperformance Philippines**, a giant in the BPO (Business Process Outsourcing) world. Just like Foundever, they made us feel very welcome.
 
-## Getting Started
+### Teleperformance: Global Impact
 
-1. **Set up your FastAPI project**
-2. **Define data models with Pydantic**
-3. **Handle dependencies and integrate databases**
+The speakers shared how big Teleperformance has become globally and how they help employees grow. We learned about their wide range of services, from customer support to tech help for companies worldwide. Touring their offices gave us a real sense of the BPO industry's scale and energy.
 
-## Pro Tips for Scaling
+**Highlights:**
+- Global company culture
+- Career growth and opportunities
+- Work-life balance matters
 
-- Use async endpoints for maximum performance
-- Deploy with Uvicorn or Gunicorn
-- Monitor and optimize with real-world traffic
+### Manila American Cemetery: Honoring Heroes
 
-![FastAPI Logo](/techstack/fastapi.svg)
+The afternoon brought a change of pace. We visited the **Manila American Cemetery and Memorial** in Bonifacio Global City (BGC). The peaceful rows of white crosses honoring American and Filipino soldiers who fought in World War II left us humbled and reflective.
 
-## Conclusion
+### Kollab Philippines: Creativity & Modern Work
 
-FastAPI isn’t just a tool—it’s your ticket to building robust, scalable APIs that power the next generation of apps. **Ready to level up your backend game? Let’s dive in!**
-`,
-  date: "2025-07-01",
-  image: "/proj/projectThree.png",
-  readTime: 6,
+Afterward, we headed to **Kollab Philippines**, a company with a creative, modern vibe. Their team talked about the importance of company culture, the impact of Artificial Intelligence (AI), and how to build a strong portfolio. We left with new knowledge—and free food!
+
+**Takeaways:**
+- Company culture matters
+- AI is changing the workplace
+- Build your portfolio and present yourself well
+
+### Reflections
+
+Day 3 was a blend of business, history, and personal growth. We ended the day feeling grateful for the sacrifices of the past and excited for the future.
+
+---
+
+*"Sometimes, the quietest moments teach the loudest lessons."*`
 };

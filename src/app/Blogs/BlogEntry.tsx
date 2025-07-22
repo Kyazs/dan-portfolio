@@ -7,9 +7,9 @@ interface BlogEntryProps {
   id: number;
   title: string;
   date: string;
-  image: string;
+  image: any;
   summary: string;
-  readTime: number;
+  readTime: string;
   onClick: (id: number) => void;
 }
 

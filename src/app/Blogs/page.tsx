@@ -20,10 +20,10 @@ export default function Blogs() {
             <Link key={blog.id} href={`/Blogs/${blog.id}`}>
                 <BlogEntry
                   id={blog.id}
-                  title={blog.title}
+                  title={blog.name}
                   date={blog.date}
                   image={blog.image}
-                  summary={blog.summary}
+                  summary={blog.excerpt}
                   readTime={blog.readTime}
                   onClick={() => {}}
                 />
