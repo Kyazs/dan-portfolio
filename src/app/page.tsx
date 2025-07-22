@@ -314,7 +314,7 @@ export default function Home() {
 
                         <div className="hidden md:block mt-10 mb-20">
                             <TiltedCard
-                                imageSrc="/photos/tiltedcard.jpeg"
+                                imageSrc="/photos/sample.jpg"
                                 altText="Daniela"
                                 captionText="Daniela Marie Alpez"
                                 containerHeight="600px"
