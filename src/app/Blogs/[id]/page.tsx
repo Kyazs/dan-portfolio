@@ -83,7 +83,7 @@ export default function BlogDetail() {
                             remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeRaw, rehypeSanitize]}
                             components={{
-                                img: ({ node, alt = '', src = '', ...props }) => {
+                                img: ({ alt = '', src = '', }) => {
                                     // Detect alignment from alt text
                                     let alignment = 'default';
                                     let cleanedAlt = alt;
@@ -103,14 +103,14 @@ export default function BlogDetail() {
                                     const classMap: Record<string, string> = {
                                         right: 'float-right ml-4 mb-4 w-80 rounded-lg shadow-lg',
                                         left: 'float-left mr-4 mb-4 w-80 rounded-lg shadow-lg',
-                                        center: 'mx-auto my-4 w-80 block rounded-lg shadow-lg',
+                                        center: 'mx-auto my-4 w-max block rounded-lg shadow-lg',
                                         default: 'my-4 w-full max-w-md rounded-lg shadow-lg',
                                     };
 
                                     return (
                                         <span className={classMap[alignment]}>
                                             <Image
-                                                src={src}
+                                                src={typeof src === "string" ? src : ""}
                                                 alt={cleanedAlt}
                                                 width={500}
                                                 height={300}
