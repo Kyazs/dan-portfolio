@@ -24,9 +24,9 @@ const items = [
 
 // Define social media links and placeholder icon paths
 const socialLinks = [
-  { platform: "GitHub", href: "https://github.com/Yuyuhiei", iconPath: "/icons/github_icon.svg" }, // <-- Replace YOUR_GITHUB_LINK and icon path
-  { platform: "LinkedIn", href: "https://www.linkedin.com/in/lauvigne-lumeda/", iconPath: "/icons/linkedin_icon.svg" }, // <-- Replace YOUR_LINKEDIN_LINK and icon path
-  { platform: "Gmail", href: "mailto:lumedalauvigne@gmail.com", iconPath: "/icons/gmail_icon.svg" }, // <-- Replace YOUR_EMAIL_ADDRESS and icon path
+  { platform: "GitHub", href: "https://github.com/dan-tech-dev", iconPath: "/icons/github_icon.svg" }, // <-- Replace YOUR_GITHUB_LINK and icon path
+  { platform: "LinkedIn", href: "https://www.linkedin.com/in/daniela-marie-b-alpez/", iconPath: "/icons/linkedin_icon.svg" }, // <-- Replace YOUR_LINKEDIN_LINK and icon path
+  { platform: "Gmail", href: "mailto:danielaalpez2@gmail.com", iconPath: "/icons/gmail_icon.svg" }, // <-- Replace YOUR_EMAIL_ADDRESS and icon path
 ];
 
 
@@ -202,8 +202,8 @@ export default function RootLayout({
           {/* Adjusted margin for different screen sizes */}
             <Link href="/" passHref>
              <Image
-                src="/logo/lauv-logo2.svg"
-                alt="Lauv Logo"
+                src="/logo/dan-logo.png"
+                alt="Dan Logo"
                 width={35} // Base size for logo
                 height={35} // Base size for logo
                 // Added responsive sizing for the logo image itself if needed (optional, depends on design)
