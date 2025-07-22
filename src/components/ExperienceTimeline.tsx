@@ -2,7 +2,6 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
-import Image from 'next/image';
 // Removed unused import
 // import { comma } from 'postcss/lib/list';
 
@@ -100,18 +99,15 @@ const ExperienceTimeline: React.FC = () => {
       {/* Central Timeline Line */}
       {/* Framer Motion automatically promotes transform properties for hardware acceleration */}
       <motion.div
-        className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-cyan-600 to-cyan-800 transform -translate-x-1/2"
+        className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-300 via-pink-500 to-fuchsia-700 transform -translate-x-1/2"
         style={{ scaleY: scaleY, transformOrigin: 'top' }}
       />
 
       {/* Glowing Dot */}
       {/* Framer Motion handles the 'top' style updates efficiently */}
       <motion.div
-        className="absolute left-1/2 w-4 h-4 rounded-full bg-cyan-500 shadow-[0_0_15px_5px_rgba(0,255,255,0.5)] transform -translate-x-1/2"
-        // Use the dotTop motion value (derived from the sprung scaleY) for the top style
+        className="absolute left-1/2 w-4 h-4 rounded-full bg-pink-500 shadow-[0_0_15px_5px_rgba(232,121,249,0.5)] transform -translate-x-1/2"
         style={{ top: dotTop }}
-        // Optional: Add will-change property as a hint to the browser (use with caution)
-        // className="absolute left-1/2 w-4 h-4 rounded-full bg-cyan-500 shadow-[0_0_15px_5px_rgba(0,255,255,0.5)] transform -translate-x-1/2 will-change-top"
       />
 
 
@@ -123,7 +119,7 @@ const ExperienceTimeline: React.FC = () => {
             <div className={`flex flex-col ${index % 2 === 0 ? 'md:items-end md:text-right' : 'md:items-start md:text-left'} ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
               <h3 className="md:text-2xl text-xl font-bold text-gray-100">{exp.title}</h3>
 
-              <p className="text-lg text-cyan-400 mb-1">{exp.company}</p>
+              <p className="text-lg text-pink-400 mb-1">{exp.company}</p>
               {/* Year */}
               <span
                 className="md:text-xl text-md font-regular text-gray-400 mb-2"

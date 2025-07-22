@@ -189,7 +189,7 @@ export default function Home() {
                         sentence="Leader   Designer   Developer"
                         manualMode={true}
                         blurAmount={5}
-                        borderColor="cyan"
+                        borderColor="#FF2DD1"
                         animationDuration={0.3}
                         pauseBetweenAnimations={1}
                     />
@@ -243,7 +243,7 @@ export default function Home() {
                                 environment, optimizing workflows, and ensuring strategic alignment to 
                                 deliver high-quality products on time and within scope.
                             </p>
-                            <h4 className="text-cyan-300 font-semibold mb-3 text-base">
+                            <h4 className="text-pink-500 font-semibold mb-3 text-base">
                                 Skillset &amp; tools
                             </h4>
                             <div className="flex flex-wrap gap-2">
@@ -267,7 +267,7 @@ export default function Home() {
                                 principles to create engaging and accessible interfaces.
                                 {/* Updated description */}
                             </p>
-                            <h4 className="text-cyan-300 font-semibold mb-3 text-base">
+                            <h4 className="text-pink-500 font-semibold mb-3 text-base">
                                 Skillset &amp; Tools
                             </h4>
                             <div className="flex flex-wrap gap-2">
@@ -289,7 +289,7 @@ export default function Home() {
                                 FlutterFlow, and Firebase and eventually switched to 
                                 Web Development using Next.js, React, and Tailwind.
                             </p>
-                            <h4 className="text-cyan-300 font-semibold mb-3 text-base">
+                            <h4 className="text-pink-500 font-semibold mb-3 text-base">
                                 Skillset &amp; tools
                             </h4>
                             <div className="flex flex-wrap gap-2">

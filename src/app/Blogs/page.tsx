@@ -2,7 +2,7 @@
 import React from "react";
 import { blogs } from "@/data/blogs";
 import BlogEntry from "./BlogEntry";
-import Link from "next/link";
+
 
 export default function Blogs() {
 
@@ -17,17 +17,16 @@ export default function Blogs() {
       <div className="flex flex-col w-full max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-20">
         <ul className="space-y-6">
           {blogs.map((blog) => (
-            <Link key={blog.id} href={`/Blogs/${blog.id}`}>
-                <BlogEntry
-                  id={blog.id}
-                  title={blog.name}
-                  date={blog.date}
-                  image={blog.image}
-                  summary={blog.excerpt}
-                  readTime={blog.readTime}
-                  onClick={() => {}}
-                />
-            </Link>
+            <BlogEntry
+              key={blog.id}
+              id={blog.id}
+              title={blog.name}
+              date={blog.date}
+              image={blog.image}
+              summary={blog.excerpt}
+              readTime={blog.readTime}
+              url={`/Blogs/${blog.id}`}
+            />
           ))}
         </ul>
       </div>

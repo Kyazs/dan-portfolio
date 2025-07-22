@@ -87,7 +87,7 @@ export default function Contact() {
                     {contactInfo.email && (
                         <div className="flex items-center text-white/80">
                             {/* You can add an icon here, e.g., a mail icon SVG or Image */}
-                            <span className="mr-2 text-cyan-500">📧</span>{" "}
+                            <span className="mr-2 text-pink-500">📧</span>{" "}
                             {/* Example icon */}
                             <a
                                 href={`mailto:${contactInfo.email}`}
@@ -101,13 +101,13 @@ export default function Contact() {
                     {/*
           {contactInfo.phone && (
             <div className="flex items-center text-white/80">
-              <span className="mr-2 text-cyan-500">📞</span>
+              <span className="mr-2 text-pink-500">📞</span>
               <a href={`tel:${contactInfo.phone}`} className="hover:underline text-base sm:text-lg">{contactInfo.phone}</a>
             </div>
           )}
           {contactInfo.location && (
             <div className="flex items-center text-white/80">
-              <span className="mr-2 text-cyan-500">📍</span>
+              <span className="mr-2 text-pink-500">📍</span>
               <span className="text-base sm:text-lg">{contactInfo.location}</span>
             </div>
           )}

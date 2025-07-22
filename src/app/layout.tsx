@@ -169,8 +169,8 @@ export default function RootLayout({
             width: '8px', // Size of the inner dot
             height: '8px',
             borderRadius: '50%', // Make it round
-            backgroundColor: '#06b6d4', // Cyan color (Tailwind cyan-500 equivalent)
-            boxShadow: '0 0 10px 4px rgba(6, 182, 212, 0.7)', // Glowing effect
+            backgroundColor: '#ec4899', // Pink color (Tailwind pink-500 equivalent)
+            boxShadow: '0 0 10px 4px rgba(236, 72, 153, 0.7)', // Pink glowing effect
             }}
             className="hidden md:block" // Hide on mobile (optional, can be removed if you want it on mobile too)
         />
@@ -188,7 +188,7 @@ export default function RootLayout({
             width: '30px', // Size of the outer circle
             height: '30px',
             borderRadius: '50%', // Make it round
-            border: '2px solid #0891b2', // Border color (Tailwind cyan-600 equivalent)
+            border: '2px solid #db2777', // Border color (Tailwind pink-600 equivalent)
             // Optional: opacity for transparency
             opacity: 0.5,
             }}
